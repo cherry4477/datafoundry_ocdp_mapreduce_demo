@@ -4,8 +4,9 @@ echo "36.110.132.55 hadoop-2.jcloud.local" >> /etc/hosts
 
 echo "kinit"
 date
-kinit <Mapreduce tenant krb principal> <<!!
-<Mapreduce tenant krb password>
+kinit BSI_MAPREDUCE_PRINCIPAL <<!!
+BSI_MAPREDUCE_PASSWORD
 !!
 
-yarn jar /root/jars/<mapreduce jar file> <arg1> <arg2> ...
+echo "Run jar..."
+yarn jar /root/jars/MAPREDUCE_JAR_FILE ARG1 ARG2 ...
